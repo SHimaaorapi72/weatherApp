@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <section class="main">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary p-3" data-bs-theme="dark">
+            <div class="container">
+                <a class='branding d-flex align-items-center' href='/'>
+                    <img src="/img/logo@2x.png" alt="cloud logo" class="logo">
+                    <div class="logo-type">
+                        <h1 class="site-title">Weather</h1>
+                        <small class="site-description">tagline goes here</small>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <ul class="menu d-flex flex-column flex-lg-row m-auto">
+                            <li class="menu-item current-menu-item active "><a  href='/'>Home</a></li>
+                            <li class="menu-item"><a href="#">News</a></li>
+                            <li class="menu-item"><a href="#">Live cameras</a></li>
+                            <li class="menu-item"><a href="#">Photos</a></li>
+                            <li class="menu-item"><a href='#'>Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 my-5 d-flex justify-content-center">
+                    <input id="search" type="text" name="text" class="input rounded-pill" placeholder="Find your location...">
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center py-5">
+                <div class="col-md-4 mb-3">
+                    <div class="card text-body" style="border-radius: 35px; background-color: rgba(255, 255, 255, 0.3); height: 350px;">
+                        <div class="card-body p-4 text-light">
+                            <div class="d-flex">
+                                <h5 id="today_location" class="flex-grow-1">Cairo</h5>
+                                <h5 id="today_date_name" class="flex-grow-1">Sunday</h5>
+                                <span class="d-flex justify-content-center align-items-center">
+                                    <h5 id="today_date_number" class="mx-1">30</h5>
+                                    <h5 id="today_date_month">May</h5>
+                                </span>
+                            </div>
+                            <div class="d-flex flex-column text-center mt-5 mb-4">
+                                <h6 id="today_temp" class="display-4 mb-0 font-weight-bold">13°C</h6>
+                                <span id="today_condition_text" class="small text-light">Stormy</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-grow-1" style="font-size: 1rem;">
+                                    <div><i class="fas fa-wind fa-fw text-light"></i> <span id="wind" class="ms-1">40 km/h</span></div>
+                                    <div><i class="fas fa-tint fa-fw text-light"></i> <span id="wind_direction" class="ms-1">84%</span></div>
+                                    <div><i class="fas fa-sun fa-fw text-light"></i> <span id="humidity" class="ms-1"></span></div>
+                                </div>
+                                <div>
+                                    <img id="today_condition_img" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp" width="100px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card text-body text-center" style="border-radius: 35px; background-color: rgba(255, 255, 255, 0.3); height: 350px;">
+                        <div class="card-body p-4 text-light">
+                            <h5 class="next_day_name m-auto">Sunday</h5>
+                            <div class="d-flex flex-column text-center mt-4 mb-4">
+                                <h6 class="next_max_temp display-4 mb-2 font-weight-bold">13°C</h6>
+                                <h3 class="next_min_temp mb-1 font-weight-bold">13°C</h3>
+                                <span class="next_condition_text small text-light mb-4">Stormy</span>
+                                <img class="next_condition_img m-auto" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp" width="100px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card text-body text-center" style="border-radius: 35px; background-color: rgba(255, 255, 255, 0.3); height: 350px;">
+                        <div class="card-body p-4 text-light">
+                            <h5 class="next_day_name m-auto">Sunday</h5>
+                            <div class="d-flex flex-column text-center mt-4 mb-4">
+                                <h6 class="next_max_temp display-4 mb-2 font-weight-bold">13°C</h6>
+                                <h3 class="next_min_temp mb-1 font-weight-bold">13°C</h3>
+                                <span class="next_condition_text small text-light mb-4">Stormy</span>
+                                <img class="next_condition_img m-auto" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp" width="100px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+
+
+  
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
